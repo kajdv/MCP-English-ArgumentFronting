@@ -45,7 +45,7 @@ var items = [
     )]
     ,
     ["instructions", "PennController", PennController(
-        newHtml("instructions form", "TaskInstructionsUnmarked.html")
+        newHtml("instructions form", "TaskInstructionsTopz.html")
             .print()
         ,
         newButton("continue btn", "Click for more instructions.")
@@ -132,7 +132,7 @@ var items = [
 
 PennController.GetTable( "datasource-however_v5.csv" ).setLabel("Expt");
 
-PennController.FeedItems( PennController.GetTable( "datasource-however.csv" ).filter("ExptType","Practice"),
+PennController.FeedItems( PennController.GetTable( "datasource-however_v5.csv" ).filter("ExptType","Practice"),
     (item) => PennController(
         newFunction("isGood", function(){ return item.Expt=="Practice-good"; })
         ,
@@ -145,7 +145,7 @@ PennController.FeedItems( PennController.GetTable( "datasource-however.csv" ).fi
                     .settings.size(700, 30)
             )    
             .settings.add(25,70,
-                newText("stimuli", item.StimUnmarked)
+                newText("stimuli", item.StimArgfront)
                     .settings.italic()
                     .settings.size(700, 30)
             )
@@ -221,7 +221,7 @@ PennController.FeedItems( PennController.GetTable( "datasource-however_v5.csv" )
                     .settings.size(700, 30)
             )   
             .settings.add(25,70,
-                newText("stimuli", item.StimUnmarked)
+                newText("stimuli", item.StimArgfront)
                     .settings.italic()
                     .settings.size(700, 30)
             )
@@ -270,7 +270,7 @@ PennController.FeedItems( PennController.GetTable( "datasource-however_v5.csv" )
     .log("Item", item.Item)
     .log("NoExpt", item.NoExpt)
     .log("EmbCondition", item.EmbCondition)
-    .log("StimUnmarked", item.StimUnmarked)
+    .log("StimArgfront", item.StimArgfront)
     .log("mcpred", item.mcpred)
 //    .log("StimArgfront", item.StimArgfront)
 //    .log("StimAdjunct", item.StimAdjunct)
@@ -295,7 +295,7 @@ PennController.FeedItems( PennController.GetTable( "datasource-however_v5.csv" )
                     .settings.size(700, 30)
             )   
             .settings.add(25,70,
-                newText("stimuli", item.StimUnmarked)
+                newText("stimuli", item.StimArgfront)
                     .settings.italic()
                     .settings.size(700, 30)
             )
@@ -344,7 +344,7 @@ PennController.FeedItems( PennController.GetTable( "datasource-however_v5.csv" )
     .log("Item", item.Item)
     .log("NoExpt", item.NoExpt)
     .log("EmbCondition", item.EmbCondition)
-    .log("StimUnmarked", item.StimUnmarked)
+    .log("StimArgfront", item.StimArgfront)
     .log("mcpred", item.mcpred)
 //    .log("StimArgfront", item.StimArgfront)
 //    .log("StimAdjunct", item.StimAdjunct)
